@@ -59,11 +59,17 @@ disease_classes = ['Apple___Apple_scab',
                    'Tomato___Tomato_mosaic_virus',
                    'Tomato___healthy']
 
+# Loading the model
 disease_model_path = 'models/plant_disease_model.pth'
 disease_model = ResNet9(3, len(disease_classes))
+
+# Loading state_dict with weights_only set to True
 disease_model.load_state_dict(torch.load(
-    disease_model_path, map_location=torch.device('cpu')))
+    disease_model_path, map_location=torch.device('cpu'), weights_only=True))
+
+# Setting the model to evaluation mode
 disease_model.eval()
+
 
 
 # Loading crop recommendation model
