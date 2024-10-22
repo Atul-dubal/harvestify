@@ -2,10 +2,9 @@ pandas
 Flask
 scikit-learn>=0.24.0
 requests
-Pillow
-torchvision
-gunicorn == 20.0.4
+torchvision>=0.11.0
+gunicorn==20.0.4
 setuptools
-torch>=2.0.0
-numpy>=1.22
+torch>=2.0.0 --no-deps --no-cache-dir  # Slim version
+numpy>=1.22 --no-binary :all:          # Slim numpy
 markupsafe
