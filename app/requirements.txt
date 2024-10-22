@@ -9,3 +9,5 @@ Pillow
 gunicorn == 20.0.4
 setuptools
 distutils
+torch>=2.0.0
+
