@@ -3,6 +3,7 @@ Flask
 scikit-learn
 requests
 Pillow
+torchvision
 gunicorn == 20.0.4
 setuptools
 torch>=2.0.0
